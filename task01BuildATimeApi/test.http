@@ -1,0 +1,13 @@
+
+GET  http://localhost:8080/api/time
+# Resposta: {"UTC": "2023-10-05 12:34:56 +0000 UTC"}
+
+###
+
+GET http://localhost:8080/api/time?tz=America/New_York,Europe/London
+# Resposta: {"America/New_York": "...", "Europe/London": "..."}
+
+###
+
+GET  http://localhost:8080/api/time?tz=Invalid/Timezone
+# Resposta: {"error": "invalid timezone: Invalid/Timezone"} (status 400)
